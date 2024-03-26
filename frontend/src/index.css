@@ -1,0 +1,547 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --primary: #fff7e4;
+  --button: #e9dac1;
+  --aqua: #54bab9;
+}
+
+.error {
+  color: rgba(255, 0, 0, 0.869);
+}
+
+.flex-container {
+  display: flex;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--button);
+}
+
+button:hover {
+  background-color: #f7ecde;
+  cursor: pointer;
+}
+
+/* login and signup */
+.cont {
+  padding: 0 20px;
+}
+form.signup,
+form.login {
+  margin: 0 auto;
+  max-width: 500px;
+  background: white;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 5px 4px 25px 8px rgba(0, 0, 0, 0.04);
+}
+
+form.signup h3,
+form.login h3 {
+  text-align: center;
+}
+form.signup label,
+form.signup input,
+form.login label,
+form.login input {
+  display: block;
+}
+form.signup > *,
+form.login > * {
+  margin: 0 auto;
+}
+
+form.signup input,
+form.login input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+form.signup button,
+form.login button {
+  width: 80px;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--button);
+}
+
+form.signup button:hover,
+form.login button:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}
+form.signup p,
+form.login p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form.signup a,
+form.login a {
+  text-decoration: none;
+  color: #54bab9;
+}
+
+/* navbar */
+.logo {
+  cursor: pointer;
+}
+
+header .flex-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px 30px;
+  height: 100px;
+}
+
+.nav-main a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+.nav-main a:hover {
+  color: #54bab9;
+}
+
+.nav-main button {
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 20px;
+  background-color: var(--button);
+}
+.nav-main button:hover {
+  background-color: #f7ecde;
+  cursor: pointer;
+}
+
+header img {
+  max-width: 150px;
+}
+
+header {
+  height: 180px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 150px;
+}
+footer p {
+  text-align: center;
+}
+
+/* equipment-card */
+
+.equipment-card-parent {
+  display: flex;
+  justify-content: center;
+}
+
+.equipment-card {
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+  background-color: white;
+  transition: 0.3s ease-in-out;
+  box-shadow: 5px 4px 25px 8px rgba(0, 0, 0, 0.04);
+  justify-content: center;
+  padding: 10px;
+}
+
+.equipment-card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.equipment-card img,
+.equipment-details img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.equipment-card .details {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.equipment-card p {
+  font-size: 20px;
+}
+
+.available {
+  color: green;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.not-available {
+  color: rgb(158, 1, 1);
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.draft {
+  width: 100%;
+  background-color: grey;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+
+  font-size: 20px;
+}
+
+/* home */
+h1 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.home.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home .equipment {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* equipment-details */
+
+.equipment-details {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 4px 25px 8px rgba(0, 0, 0, 0.04);
+  padding: 20px 40px;
+}
+
+.img-title {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.img-title h3 {
+  margin: 0;
+  font-size: 35px;
+}
+.bottom-parent {
+  justify-content: space-between;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.bottom-parent .details {
+  width: 60%;
+  text-align: justify;
+}
+
+.reservation-div {
+  width: 200px;
+}
+.reserved p {
+  font-size: 25px;
+  font-weight: 600;
+  color: green;
+}
+.reservation-div button,
+.reservation-div input {
+  width: 100%;
+  display: block;
+}
+
+.reservation-div input {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.reservation-div button {
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--button);
+  margin-bottom: 10px;
+}
+.reservation-div button:hover {
+  background-color: #f7ecde;
+  cursor: pointer;
+}
+
+/* create-edit admin forms */
+.content-wrapper.admin {
+  background-color: white;
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 5px 4px 25px 8px rgba(0, 0, 0, 0.04);
+}
+
+form.admin-form {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 40px;
+}
+
+form.admin-form label,
+form.admin-form input {
+  display: block;
+}
+
+form.admin-form input,
+form.admin-form textarea,
+form.admin-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+form.admin-form textarea {
+  height: 150px;
+}
+
+form.admin-form select {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+form.admin-form button {
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--button);
+}
+
+form.admin-form button:hover {
+  background-color: #f7ecde;
+  cursor: pointer;
+}
+
+/* admin equipment details */
+button.edit-eq,
+button.delete-eq {
+  width: 80px;
+  margin-bottom: 15px;
+}
+button.delete-eq {
+  background-color: rgba(181, 4, 4, 0.409);
+}
+button.delete-eq:hover {
+  background-color: rgba(181, 4, 4, 0.233);
+}
+
+/* user reservations list */
+.reservations-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.reservationList img {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+}
+
+ul.reservationList {
+  width: 100%;
+  padding: 0;
+}
+
+.reservationList li {
+  list-style-type: none;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: white;
+
+  border-radius: 12px;
+  box-shadow: 5px 4px 25px 8px rgba(0, 0, 0, 0.04);
+}
+
+.reservationList li .details {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+.reservationList .buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.reservationList button {
+  margin: 0;
+  width: 160px;
+  padding: 5px 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--button);
+}
+.reservationList button:hover {
+  background-color: #f7ecde;
+  cursor: pointer;
+}
+
+.editDateForm {
+  margin-top: 20px;
+}
+.editDateForm p {
+  font-weight: 600;
+  margin: 0;
+  font-size: 18px;
+}
+.editDateForm input {
+  width: 180px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.editDateForm button {
+  width: 180px;
+  display: block;
+  padding: 10px 15px;
+}
+
+/* admin reservation list */
+.reservationList.admin button {
+  width: 120px;
+  height: 40px;
+}
+
+.reservationList.admin img {
+  width: 100px;
+  height: 60;
+}
+
+/* admin update equipment */
+
+/* responsive */
+
+@media screen and (max-width: 1200px) {
+  .home .equipment {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .content-wrapper.admin {
+    width: 700px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .content-wrapper.admin {
+    margin-top: 20px;
+    width: 500px;
+  }
+
+  .home .equipment {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .nav-main button {
+    font-size: 14px;
+    padding: 7px;
+    margin-left: 8px;
+  }
+  .nav-main span {
+    font-size: 14px;
+  }
+
+  .home h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .reservationList .details {
+    flex-direction: column;
+  }
+  .reservationList .details p {
+    margin: 0;
+  }
+
+  .reservationList li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .reservationList li .editDateForm {
+    margin-top: 50px;
+    padding: 15px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .nav-main button {
+    font-size: 12px;
+    padding: 5px;
+    margin-left: 8px;
+  }
+}
