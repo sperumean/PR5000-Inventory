@@ -40,7 +40,8 @@ const AdminResPage = () => {
       fetchReservations();
       setReservationUpdated(false);
     }
-  }, [reservationUpdated]);
+  }, [reservationUpdated, fetchReservations]);
+
 
   //
   useEffect(() => {
