@@ -24,7 +24,7 @@ const AdminResForm = () => {
       return;
     }
     const equipment = { title, image, price, description, availability, draft };
-    const response = await fetch("/api/equipment", {
+    const response = await fetch("http://47.153.42.179:19133/api/equipment", {
       method: "POST",
       body: JSON.stringify(equipment),
       headers: {
