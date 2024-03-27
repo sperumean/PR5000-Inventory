@@ -10,7 +10,7 @@ const Home = () => {
 
   // const updateEquipment = async (equip) => {
   //   try {
-  //     const response = await fetch(`/api/equipment/${equip._id}`, {
+  //     const response = await fetch("http://47.153.42.179:19133/api/equipment", {
   //       method: "PUT",
   //       headers: {
   //         "Content-Type": "application/json",
