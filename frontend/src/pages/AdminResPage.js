@@ -42,10 +42,6 @@ const AdminResPage = () => {
     }
   }, [reservationUpdated]);
 
-  useEffect(() => {
-    fetchReservations();
-  }); // Depend on fetchReservations
-
   //
   useEffect(() => {
   fetchReservations();
