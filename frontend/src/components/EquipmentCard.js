@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 const EquipmentCard = ({ equipment }) => {
- // const [error, setError] = useState(null);
   const navigate = useNavigate();
   const { user } = useAuthContext();
 
   const handleClick = () => {
     navigate("/equipment/" + equipment._id);
   };
+
   return (
     <div onClick={handleClick} className="equipment-card-parent">
       {equipment ? (
@@ -39,7 +39,7 @@ const EquipmentCard = ({ equipment }) => {
           )}
         </div>
       ) : (
-        <div className="error-message">{error}</div>
+        <div className="error-message">Equipment not found</div>
       )}
     </div>
   );
