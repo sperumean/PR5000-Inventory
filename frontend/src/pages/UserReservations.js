@@ -24,7 +24,7 @@ const UserReservations = () => {
 
   const handleCancelReservation = async (reservationId) => {
     try {
-      const response = await fetch("/api/reservations/" + reservationId, {
+      const response = await fetch("http://47.153.42.179:19133/api/reservations/" + reservationId, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const UserReservations = () => {
 
   const handleEditSubmit = async () => {
     try {
-      const response = await fetch(`/api/reservations/${reservationId}`, {
+      const response = await fetch(`http://47.153.42.179:19133/api/reservations/${reservationId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const UserReservations = () => {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await fetch("/api/reservations", {
+        const response = await fetch("http://47.153.42.179:19133/api/reservations", {
           headers: { Authorization: `Bearer ${user.token}` },
         });
         const data = await response.json();
