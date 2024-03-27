@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
 import equipmentRoutes from "./routes/equipment.js";
 import userRoutes from "./routes/user.js";
 import reservationRoutes from "./routes/reservation.js";
@@ -10,9 +11,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use((req, res, next) => {
-  next();
-});
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://your-netlify-domain.netlify.app']
+}));
 
 // Routes
 app.use("/api/equipment", equipmentRoutes);
