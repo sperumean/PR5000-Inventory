@@ -17,7 +17,7 @@ const UserEquipmentDetails = () => {
   useEffect(() => {
     const fetchEquipmentDetails = async () => {
       try {
-        const response = await fetch(`/api/equipment/${equipmentId}`);
+        const response = await fetch(`http://47.153.42.179:19133/api/equipment/${equipmentId}`);
         const data = await response.json();
         if (response.ok) {
           setEquipment(data);
@@ -46,7 +46,7 @@ const UserEquipmentDetails = () => {
     };
 
     try {
-      const reservationResponse = await fetch(`/api/reservations`, {
+      const reservationResponse = await fetch(`http://47.153.42.179:19133/api/reservations`, {
         method: "POST",
         body: JSON.stringify(reservation),
         headers: {
