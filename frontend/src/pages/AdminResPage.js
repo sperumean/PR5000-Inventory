@@ -46,6 +46,11 @@ const AdminResPage = () => {
     fetchReservations();
   }); // Depend on fetchReservations
 
+  //
+  useEffect(() => {
+  fetchReservations();
+  }, [fetchReservations]);
+
   useEffect(() => {
     if (equipmentAvailabilityUpdated) {
       fetchReservations(); // Refetch reservations if availability is updated
