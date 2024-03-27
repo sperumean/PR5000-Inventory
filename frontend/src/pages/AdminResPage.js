@@ -14,7 +14,7 @@ const AdminResPage = () => {
 
   const fetchReservations = useCallback(async () => {
     try {
-      const response = await fetch("/api/reservations", {
+      const response = await fetch("http://47.153.42.179:19133/api/reservations", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${user.token}`,
@@ -61,7 +61,7 @@ const AdminResPage = () => {
 
   const handleUpdateResStatus = async (reservationId) => {
     try {
-      const response = await fetch(`/api/reservations/${reservationId}`, {
+      const response = await fetch(`http://47.153.42.179:19133/api/reservations/${reservationId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const AdminResPage = () => {
 
 const handleApproveRes = async (reservationId) => {
   try {
-    const response = await fetch(`/api/reservations/${reservationId}`, {
+    const response = await fetch(`http://47.153.42.179:19133/api/reservations/${reservationId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -138,7 +138,7 @@ const handleApproveRes = async (reservationId) => {
 
 const handleNotApproveRes = async (reservationId) => {
   try {
-    const response = await fetch(`/api/reservations/${reservationId}`, {
+    const response = await fetch(`http://47.153.42.179:19133/api/reservations/${reservationId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
