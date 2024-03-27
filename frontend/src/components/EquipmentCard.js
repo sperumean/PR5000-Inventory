@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 const EquipmentCard = ({ equipment }) => {
-  const [error, setError] = useState(null);
+ // const [error, setError] = useState(null);
   const navigate = useNavigate();
   const { user } = useAuthContext();
 
