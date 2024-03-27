@@ -10,7 +10,7 @@ const AdminUpdateEquipment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/equipment/${equipmentId}`);
+        const response = await fetch(`http://47.153.42.179:19133/api/equipment/${equipmentId}`);
         const data = await response.json();
         if (response.ok) {
           setEquipment(data);
@@ -34,7 +34,7 @@ const AdminUpdateEquipment = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`/api/equipment/${equipmentId}`, {
+      const response = await fetch(`http://47.153.42.179:19133/api/equipment/${equipmentId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
